@@ -103,6 +103,7 @@ backend-techlab-final/
 └── package.json
 ```
 ## 🔄 Diagrama de Arquitectura
+```mermaid
 graph TD
     subgraph Cliente
         Postman[Postman / Frontend]
@@ -137,6 +138,7 @@ graph TD
     
     style Firestore fill:#f9f,stroke:#333,stroke-width:2px
     style Middleware fill:#ff9,stroke:#333,stroke-width:2px
+```
 
 ## ✒️ Autor
 

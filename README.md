@@ -102,6 +102,41 @@ backend-techlab-final/
 ├── README.md
 └── package.json
 ```
+## 🔄 Diagrama de Arquitectura
+graph TD
+    subgraph Cliente
+        Postman[Postman / Frontend]
+    end
+
+    subgraph "Backend (Node.js + Express)"
+        Router[Rutas (Routes)]
+        Middleware{¿Auth Token?}
+        Controller[Controladores]
+        Service[Servicios]
+        Model[Modelos]
+    end
+
+    subgraph Nube
+        Firestore[(Firebase Firestore)]
+    end
+
+    %% Flujo de la petición
+    Postman -->|1. HTTP Request| Router
+    Router -->|Ruta Privada| Middleware
+    Router -->|Ruta Pública| Controller
+    
+    Middleware --x|Token Inválido| Postman
+    Middleware -->|Token OK| Controller
+
+    Controller -->|2. Procesa| Service
+    Service -->|3. Lógica| Model
+    Model <-->|4. Lee/Escribe Datos| Firestore
+
+    %% Respuesta
+    Controller -.->|5. JSON Response| Postman
+    
+    style Firestore fill:#f9f,stroke:#333,stroke-width:2px
+    style Middleware fill:#ff9,stroke:#333,stroke-width:2px
 
 ## ✒️ Autor
 

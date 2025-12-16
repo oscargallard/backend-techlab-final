@@ -79,3 +79,30 @@ Para usar `POST` o `DELETE`, debes incluir el token en la pestaña **Authorizati
 ## 📂 Estructura del Proyecto
 
 El proyecto sigue una arquitectura escalable:
+
+```
+backend-techlab-final/
+├── controllers/
+│   ├── auth.controller.js
+│   └── product.controller.js
+├── models/
+│   └── product.model.js
+├── routes/
+│   ├── auth.routes.js
+│   └── products.routes.js
+├── services/
+│   └── product.service.js
+├── middlewares/
+│   └── auth.middleware.js
+├── config/
+│   └── firebase.js
+├── index.js
+├── .env
+├── .env.example
+├── README.md
+└── package.json
+```
+
+## ✒️ Autor
+
+* **Oscar Luis Gallard** - *Alumno Desarrollador Backend*

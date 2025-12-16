@@ -106,19 +106,19 @@ backend-techlab-final/
 ```mermaid
 graph TD
     subgraph Cliente
-        Postman[Postman / Frontend]
+        Postman["Postman / Frontend"]
     end
 
     subgraph "Backend (Node.js + Express)"
-        Router[Rutas (Routes)]
-        Middleware{¿Auth Token?}
-        Controller[Controladores]
-        Service[Servicios]
-        Model[Modelos]
+        Router["Rutas (Routes)"]
+        Middleware{"¿Auth Token?"}
+        Controller["Controladores"]
+        Service["Servicios"]
+        Model["Modelos"]
     end
 
     subgraph Nube
-        Firestore[(Firebase Firestore)]
+        Firestore[("Firebase Firestore")]
     end
 
     %% Flujo de la petición

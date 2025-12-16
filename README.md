@@ -103,7 +103,7 @@ backend-techlab-final/
 └── package.json
 ```
 ## 🔄 Diagrama de Arquitectura
-```
+```mermaid
 graph TD
     subgraph Cliente
         Postman[Postman / Frontend]
